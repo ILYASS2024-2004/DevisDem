@@ -1,0 +1,180 @@
+:root {
+    /* Couleurs principales */
+    --primary-color: #2563eb;
+    --primary-color-dark: #1d4ed8;
+    --secondary-color: #64748b;
+    --secondary-color-dark: #475569;
+
+    /* Couleurs de fond */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-hover: #f1f5f9;
+    --bg-primary-dark: #1e293b;
+    --bg-secondary-dark: #0f172a;
+
+    /* Couleurs de texte */
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-disabled: #94a3b8;
+    --text-primary-dark: #f8fafc;
+    --text-secondary-dark: #cbd5e1;
+
+    /* Couleurs de bordure */
+    --border-color: #e2e8f0;
+    --border-color-dark: #334155;
+
+    /* Couleurs d'état */
+    --success-color: #22c55e;
+    --success-color-dark: #16a34a;
+    --warning-color: #f59e0b;
+    --warning-color-dark: #d97706;
+    --error-color: #ef4444;
+    --error-color-dark: #dc2626;
+    --info-color: #3b82f6;
+    --info-color-dark: #2563eb;
+
+    /* Couleurs de fond pour les messages */
+    --error-bg: #fee2e2;
+    --error-text: #dc2626;
+    --success-bg: #dcfce7;
+    --success-text: #16a34a;
+    --warning-bg: #fef3c7;
+    --warning-text: #d97706;
+    --info-bg: #dbeafe;
+    --info-text: #2563eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: var(--text-primary-dark);
+        background: var(--bg-primary-dark);
+    }
+}
+
+/* Styles de base */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--primary-color-dark);
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+input, select, textarea {
+    font-family: inherit;
+}
+
+/* Utilitaires */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    color: var(--text-secondary);
+}
+
+.error-message {
+    background: var(--error-bg);
+    color: var(--error-text);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.success-message {
+    background: var(--success-bg);
+    color: var(--success-text);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.warning-message {
+    background: var(--warning-bg);
+    color: var(--warning-text);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.info-message {
+    background: var(--info-bg);
+    color: var(--info-text);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color-dark);
+}
+
+/* Dark mode scrollbar */
+@media (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar-track {
+        background: var(--bg-secondary-dark);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--secondary-color-dark);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary-color);
+    }
+} 
