@@ -1,6 +1,6 @@
 # DevisDem - Application de Gestion de Devis
 
-Application web complète pour la gestion de devis et de clients, avec authentification sécurisée et interface moderne.
+Application web complète pour la gestion de devis et de clients déménageur, avec authentification sécurisée et interface moderne.
 
 ## Technologies utilisées
 
